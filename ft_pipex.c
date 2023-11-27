@@ -6,7 +6,7 @@
 /*   By: daddy_cool <daddy_cool@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 17:40:16 by daddy_cool        #+#    #+#             */
-/*   Updated: 2023/11/26 20:15:46 by daddy_cool       ###   ########.fr       */
+/*   Updated: 2023/11/27 12:42:10 by daddy_cool       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	main(int argc, char **argv, char **envp)
 			perror("\033[31;7mFork went wrong\033[0m ");
 		if (pid_child == 0)
 			cmd1_process(argv, envp, tube_fd);
-		wait(NULL);
+		waitpid(0, NULL, WNOHANG);
 		cmd2_process(argv, envp, tube_fd);
 	}
 	return (0);

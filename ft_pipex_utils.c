@@ -12,6 +12,8 @@
 
 #include "../Pipex/ft_pipex.h"
 
+/*build program to get rid of all_patgs[i]*/
+
 char	*test_paths(char *cmd, char **envp)
 {
 	char	**all_paths;
@@ -31,14 +33,20 @@ char	*test_paths(char *cmd, char **envp)
 		free(path_n_slash);
 		if (access(path, F_OK) == 0)
 		{
+			i = -1;
+			while (all_paths[++i])
+				free(all_paths[i]);
 			free(all_paths);
 			return (path);
 		}
 		free(path);
 		i++;
 	}
+	i = -1;
+	while (all_paths[++i])
+		free(all_paths[i]);
 	free(all_paths);
-	return (0);
+	return (NULL);
 }
 
 void	execute(char *argv, char **envp)
@@ -57,6 +65,6 @@ void	execute(char *argv, char **envp)
 		free(cmd);
 		perror("\033[31;7mcommand not found\033[0m ");
 	}
-	if (execve(path, cmd, envp) == -1)
-		perror("\033[31;7mexecve\033[0m ");
+	execve(path, cmd, envp);
+	perror("\033[31;7mexecve\033[0m ");
 }

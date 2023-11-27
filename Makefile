@@ -6,7 +6,7 @@
 #    By: daddy_cool <daddy_cool@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/13 17:37:59 by daddy_cool        #+#    #+#              #
-#    Updated: 2023/11/24 02:06:06 by daddy_cool       ###   ########.fr        #
+#    Updated: 2023/11/27 12:25:31 by daddy_cool       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 CC = gcc
 
 # Compiler flags
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 # Source files
 SRC = ft_pipex.c ft_pipex_utils.c
