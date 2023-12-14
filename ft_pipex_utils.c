@@ -12,7 +12,15 @@
 
 #include "../Pipex/ft_pipex.h"
 
-/*build program to get rid of all_patgs[i]*/
+void	free_all_paths(char **all_paths)
+{
+	int		i;
+
+	i = -1;
+	while (all_paths[++i])
+		free(all_paths[i]);
+	free(all_paths);
+}
 
 char	*test_paths(char *cmd, char **envp)
 {
@@ -33,19 +41,13 @@ char	*test_paths(char *cmd, char **envp)
 		free(path_n_slash);
 		if (access(path, F_OK) == 0)
 		{
-			i = -1;
-			while (all_paths[++i])
-				free(all_paths[i]);
-			free(all_paths);
+			free_all_paths(all_paths);
 			return (path);
 		}
 		free(path);
 		i++;
 	}
-	i = -1;
-	while (all_paths[++i])
-		free(all_paths[i]);
-	free(all_paths);
+	free_all_paths(all_paths);
 	return (NULL);
 }
 

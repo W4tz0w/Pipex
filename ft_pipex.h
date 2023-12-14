@@ -6,7 +6,7 @@
 /*   By: daddy_cool <daddy_cool@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 20:21:04 by daddy_cool        #+#    #+#             */
-/*   Updated: 2023/11/26 17:47:20 by daddy_cool       ###   ########.fr       */
+/*   Updated: 2023/11/27 15:09:35 by daddy_cool       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <fcntl.h>
 # include "../Libft/libft.h"
 
+void	free_all_paths(char **all_paths);
 char	*test_paths(char *cmd, char **envp);
 void	execute(char *argv, char **envp);
 
