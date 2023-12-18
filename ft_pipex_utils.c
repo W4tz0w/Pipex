@@ -26,8 +26,8 @@ char	*test_paths(char *cmd, char **envp)
 {
 	char	**all_paths;
 	char	*path;
-	int		i;
 	char	*path_n_slash;
+	int		i;
 
 	i = 0;
 	while (ft_strnstr(envp[i], "PATH", 4) == 0)
