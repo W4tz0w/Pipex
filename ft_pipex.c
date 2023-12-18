@@ -6,7 +6,7 @@
 /*   By: daddy_cool <daddy_cool@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 17:40:16 by daddy_cool        #+#    #+#             */
-/*   Updated: 2023/12/18 13:08:21 by daddy_cool       ###   ########.fr       */
+/*   Updated: 2023/12/18 13:27:29 by daddy_cool       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,9 +75,5 @@ int	main(int argc, char **argv, char **envp)
 	}
 	else
 		ft_macro_pipex(argv, envp);
-	while(1)
-	{
-		printf("hdvfjhsf");
-	}
 	return (0);
 }
