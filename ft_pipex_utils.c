@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Pipex/ft_pipex.h"
+#include "ft_pipex.h"
 
 void	free_all_paths(char **all_paths)
 {

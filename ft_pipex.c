@@ -6,11 +6,11 @@
 /*   By: daddy_cool <daddy_cool@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 17:40:16 by daddy_cool        #+#    #+#             */
-/*   Updated: 2023/12/18 13:27:29 by daddy_cool       ###   ########.fr       */
+/*   Updated: 2023/12/18 13:46:02 by daddy_cool       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Pipex/ft_pipex.h"
+#include "ft_pipex.h"
 
 /* tube_fd[0] = Lecture
 tube_fd[1] = Ecriture */
