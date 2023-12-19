@@ -1,0 +1,19 @@
+# Ignorer les fichiers compilés
+*.o
+*.out
+
+# Ignorer les fichiers d'exécution
+*.exe
+
+# Ignorer les fichiers d'environnement
+.env
+
+# Ignorer les fichiers de dépendances et de build
+node_modules/
+build/
+
+# Ignorer les fichiers système et les fichiers cachés
+.DS_Store
+Thumbs.db
+
+

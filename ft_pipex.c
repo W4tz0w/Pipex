@@ -6,7 +6,7 @@
 /*   By: daddy_cool <daddy_cool@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 17:40:16 by daddy_cool        #+#    #+#             */
-/*   Updated: 2023/12/18 13:46:02 by daddy_cool       ###   ########.fr       */
+/*   Updated: 2023/12/19 12:36:07 by daddy_cool       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,10 @@ void	cmd2_process(char **argv, char **envp, int *tube_fd)
 
 	outfile = open(argv[4], O_WRONLY | O_CREAT | O_TRUNC, 0777);
 	if (outfile == -1)
+	{
 		perror("\033[31;7mOutfile opening went wrong\033[0m ");
+		exit(EXIT_FAILURE);
+	}
 	dup2(tube_fd[0], STDIN_FILENO);
 	dup2(outfile, STDOUT_FILENO);
 	close(tube_fd[1]);

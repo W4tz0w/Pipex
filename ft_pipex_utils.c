@@ -37,6 +37,8 @@ char	*test_paths(char *cmd, char **envp)
 	while (all_paths[i])
 	{
 		path_n_slash = ft_strjoin(all_paths[i], "/");
+		if (cmd == NULL)
+			return (NULL);
 		path = ft_strjoin(path_n_slash, cmd);
 		free(path_n_slash);
 		if (access(path, F_OK) == 0)

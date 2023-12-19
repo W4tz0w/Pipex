@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: egiovann <egiovann@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daddy_cool <daddy_cool@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 16:29:33 by daddy_cool        #+#    #+#             */
-/*   Updated: 2023/01/12 18:28:21 by egiovann         ###   ########.fr       */
+/*   Updated: 2023/12/19 12:16:15 by daddy_cool       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 			i++;
 		}
 		dst[i] = '\0';
-	}	
+	}
 	return (j);
 }
